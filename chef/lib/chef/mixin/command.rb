@@ -119,7 +119,7 @@ class Chef
           unless Array(opts[:returns]).include?(status.exitstatus)
             # if the log level is not debug, through output of command when we fail
             output = ""
-            if Chef::Log.level == :debug || opts[:output_on_failure]
+            if true #Chef::Log.level == :debug || opts[:output_on_failure]
               output << "\n---- Begin output of #{opts[:command]} ----\n"
               output << command_output.to_s
               output << "\n---- End output of #{opts[:command]} ----\n"
