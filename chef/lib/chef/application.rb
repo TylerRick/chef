@@ -133,7 +133,7 @@ class Chef::Application
 
       Chef::FileCache.store("chef-stacktrace.out", chef_stacktrace_out)
       Chef::Log.fatal("Stacktrace dumped to #{Chef::FileCache.load("chef-stacktrace.out", false)}")
-      Chef::Log.debug(message)
+      Chef::Log.fatal(message)
       true
     end
 
